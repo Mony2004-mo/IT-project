@@ -17,6 +17,19 @@ class MainApp extends StatelessWidget {
           backgroundColor: Colors.lightGreen,
           centerTitle: true,
         ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.amberAccent,
+
+                child: Icon(Icons.person, size: 30),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
