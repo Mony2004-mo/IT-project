@@ -1,17 +1,26 @@
-import 'package:flutter/material.dart';
-
 class Product {
-  final String name;
+  final int id;
+  final String title; // ← API uses 'title' not 'name'
   final String description;
   final double price;
-  final Color cardColor;
-  final String imageUrl;
+  final String image; // ← API uses 'thumbnail' not 'imageUrl'
 
   const Product({
-    required this.name,
+    required this.id,
+    required this.title,
     required this.description,
     required this.price,
-    required this.cardColor,
-    required this.imageUrl,
+    required this.image,
   });
+
+  // ← add this to convert JSON to Product
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+      id: json['id'],
+      title: json['title'],
+      description: json['description'],
+      price: (json['price'] as num).toDouble(),
+      image: json['thumbnail'],
+    );
+  }
 }

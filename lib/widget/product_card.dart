@@ -22,12 +22,15 @@ class ProductCard extends StatelessWidget {
             width: double.infinity,
             height: 240,
             decoration: BoxDecoration(
-              color: product.cardColor,
+              color: Colors.grey[100], // ← removed cardColor, use grey
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(16),
               ),
             ),
-            child: Image.network(product.imageUrl, fit: BoxFit.cover),
+            child: Image.network(
+              product.image, // ← changed from imageUrl to image
+              fit: BoxFit.cover,
+            ),
           ),
 
           // Info area
@@ -37,7 +40,7 @@ class ProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  product.name,
+                  product.title, // ← changed from name to title
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
