@@ -6,7 +6,10 @@ class DeliveryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Delivery')),
+      appBar: AppBar(
+        title: const Text('My Delivery'),
+        backgroundColor: const Color.fromARGB(255, 151, 222, 154),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
