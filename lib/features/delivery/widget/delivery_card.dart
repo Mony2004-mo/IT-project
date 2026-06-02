@@ -33,7 +33,7 @@ class DeliveryCard extends StatelessWidget {
               width: double.infinity,
               height: item.title != null
                   ? 120
-                  : 200, //ຖ້າມີຊື່ໃຫ້ຮູບສູງ 120, ຖ້າບໍ່ມີຊື່ໃຫ້ຮູບສູງ 200
+                  : 194, //ຖ້າມີຊື່ໃຫ້ຮູບສູງ 120, ຖ້າບໍ່ມີຊື່ໃຫ້ຮູບສູງ 200
               fit: BoxFit.cover,
             ),
             if (item.title != null) //ໃຊ້  if ກວດສອບ
